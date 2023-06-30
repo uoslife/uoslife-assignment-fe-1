@@ -1,46 +1,74 @@
-# Getting Started with Create React App
+# 과제 목표
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 스토리북을 설치하고 세팅합니다.
+- 컴포넌트 2개를 생성하고, 해당하는 스토리북 문서를 작성합니다.
 
-## Available Scripts
+# 가이드
 
-In the project directory, you can run:
+- 과제 진행 이전 npm install 명령어로 필요한 dependencies를 설치해주세요.
+- 패키지 매니저는 **npm**을 사용합니다.
+- 기본적으로 스타일은 styled-components를 이용하여 구현합니다.
+- App.tsx파일과 index.tsx파일은 변경하지 말아주세요.
+- 개인 repository에 fork해서 과제 수행 후 PR을 올려주세요.
 
-### `npm start`
+# 구현 요구 사항
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### 스토리북을 설치하고 세팅해주세요.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 공식문서나 관련 글을 서치하여 패키지에 storybook을 설치해주세요.
+- 터미널에 npm run storybook 명령어를 입력하면 기본 6006 포트에서 구동되어야 합니다.
 
-### `npm test`
+#### 텍스트 컴포넌트를 작성해주세요.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 텍스트를 재사용하기 위한 텍스트 컴포넌트를 작성해주세요.
+- 파일명과 컴포넌트명은 'Text'입니다.
+- 요구되는 props은 다음과 같습니다.
 
-### `npm run build`
+```typescript
+{
+  text: string, fontSize: number, fontWeight: number, color: string
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 구현한 텍스트 컴포넌트를 이용하여 [시대생 학식 정보 컴포넌트](https://uoslife.com/utility/cafeteria)를 작성해주세요.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 파일명과 컴포넌트명은 'Cafeteria'입니다.
+- 시대생 학식 정보 페이지에서 개발자도구를 이용하여 실제 사용되는 컴포넌트와 똑같이 구현해주세요.
+- 요구되는 props은 다음과 같습니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```typescript
+{
+	cafeteria: CafeteriaType;
+}
+```
 
-### `npm run eject`
+```typescript
+type CafeteriaType = {
+	location: string;
+	mainMenu: string;
+	detailMenu: string;
+	nutritionalInfo: string;
+	openingHours: string;
+	price: string;
+};
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- <Text /> 컴포넌트를 이용하여 cafeteriaType에 해당하는 props들을 렌더링해주세요.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```typescript
+// 예시
+<Text text={cafeteria.location} ... />
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- App.tsx 파일에 기본 학식 정보가 저장되어있으며, 구현이 완료되면 정상적으로 실행되어야 합니다.
+- '자세히보기'를 통해 시립대 학식 페이지로 redirect되는 기능은 구현해도 좋고, 구현하지 않아도 좋습니다.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### 텍스트 컴포넌트와 학식 컴포넌트의 story를 작성해주세요.
 
-## Learn More
+- 각 컴포넌트 폴더 안에 <컴포넌트 이름>.stories.tsx 파일을 생성해주세요.
+- 스토리북 설치시 생성된 stories 파일 또는 공식문서를 참고하여 작성해주세요.
+- run storybook으로 실행된 스토리북 화면에서 Text와 Cafeteria 컴포넌트를 확인할 수 있어야합니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 참고 문서 링크
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://storybook.js.org/docs/react/get-started/install
