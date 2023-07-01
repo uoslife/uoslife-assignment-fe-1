@@ -29,7 +29,7 @@ export const Text: React.FC<TextProps> = ({
 };
 
 const StyledText = styled.div<TextProps>`
-  font-size: ${({ fontSize }) => fontSize};
-  font-weight: ${({ fontWeight }) => fontWeight};
-  color: ${({ color }) => color};
+  font-size: ${(props) => props.fontSize}px;
+  font-weight: ${(props) => props.fontWeight};
+  color: ${(props) => props.color};
 `;
