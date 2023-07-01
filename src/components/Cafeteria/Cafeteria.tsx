@@ -28,7 +28,7 @@ export const Cafeteria = ({ cafeteria }: any) => {
                 fontSize={15}
                 fontWeight={400}
                 color="#3A88F5"
-              ></Text>
+              />
             </InfoMore>
           </InfoTitleBlock>
           <div>
@@ -43,7 +43,7 @@ export const Cafeteria = ({ cafeteria }: any) => {
                 <InfoTime>
                   <Text
                     text={cafeteria.openingHours}
-                    fontSize={10}
+                    fontSize={18}
                     fontWeight={400}
                     color="#656D78"
                   />
