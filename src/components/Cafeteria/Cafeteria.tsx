@@ -1,7 +1,7 @@
 import { Text } from "../Text/Text";
 import { Wrapper, TopBox, BottomBox } from "./Cafeteria.style";
 
-export const Cafeteria = (cafeteria: any) => {
+export const Cafeteria = ({ cafeteria }: any) => {
   return (
     <>
       <Wrapper>
