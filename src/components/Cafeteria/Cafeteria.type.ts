@@ -1,4 +1,4 @@
-type CafeteriaType = {
+export type CafeteriaType = {
   location: string;
   mainMenu: string;
   detailMenu: string;
@@ -6,5 +6,3 @@ type CafeteriaType = {
   openingHours: string;
   price: string;
 };
-
-export * from "./Cafeteria";
