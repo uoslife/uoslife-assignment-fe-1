@@ -6,6 +6,10 @@ const Wrapper = styled.div`
   margin-bottom: 16px;
   border-radius: 16px;
   border: 0.666667px solid rgb(222, 225, 229);
+
+  & > *:not(:first-child) {
+    border-top: 1px solid #dee1e5;
+  }
 `;
 
 type P = {
@@ -57,6 +61,12 @@ const Col = styled.div<P & M>`
   margin-right: ${(({ marginRight }) => marginRight) || 0.1}px;
 `;
 
+const Detail = styled.div`
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
 const Cafeteria = ({ cafeteria }: { cafeteria: CafeteriaType }) => {
   return (
     <Wrapper>
@@ -71,12 +81,17 @@ const Cafeteria = ({ cafeteria }: { cafeteria: CafeteriaType }) => {
           fontWeight={600}
           color={"black"}
         />
-        <Text
-          text={"자세히보기"}
-          fontSize={15}
-          fontWeight={500}
-          color="rgb(58, 136, 245)"
-        />
+        <Detail
+          onClick={() => {
+            alert("ㅋㅋ");
+          }}>
+          <Text
+            text={"자세히보기"}
+            fontSize={15}
+            fontWeight={500}
+            color="rgb(58, 136, 245)"
+          />
+        </Detail>
       </Row>
       <Col
         paddingTop={10}
