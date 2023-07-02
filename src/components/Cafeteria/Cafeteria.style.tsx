@@ -51,6 +51,7 @@ export const InfoTime = styled("div")`
 
 export const InfoMore = styled("a")`
   cursor: pointer;
+  text-decoration: none;
   :hover {
     font-weight: 700;
   }

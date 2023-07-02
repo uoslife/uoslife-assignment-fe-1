@@ -22,10 +22,12 @@ export const Cafeteria = ({ cafeteria }: any) => {
               fontWeight={600}
               color="#3B4046"
             />
-            <InfoMore>
+            <InfoMore
+              href={"https://www.uos.ac.kr/food/placeList.do?epTicket=LOG"}
+            >
               <Text
                 text="자세히보기"
-                fontSize={15}
+                fontSize={14}
                 fontWeight={400}
                 color="#3A88F5"
               />
@@ -53,7 +55,7 @@ export const Cafeteria = ({ cafeteria }: any) => {
                 <InfoTime>
                   <Text
                     text={cafeteria.detailMenu}
-                    fontSize={10}
+                    fontSize={14}
                     fontWeight={400}
                     color="#656D78"
                   />
@@ -62,7 +64,7 @@ export const Cafeteria = ({ cafeteria }: any) => {
               <InfoContent1>
                 <Text
                   text={cafeteria.nutritionalInfo}
-                  fontSize={5}
+                  fontSize={10}
                   fontWeight={400}
                   color="#656D78"
                 />
