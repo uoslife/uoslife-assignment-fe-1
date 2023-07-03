@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { CafeteriaType } from "./Cafeteria.type";
-import Text from "../Text/Text";
+import Text from "./Text";
 
 const Wrapper = styled.div`
   margin-bottom: 16px;
