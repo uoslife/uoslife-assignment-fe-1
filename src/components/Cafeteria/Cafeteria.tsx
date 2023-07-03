@@ -48,38 +48,38 @@ export const Cafeteria = ({ cafeteria }: CafeteriaProps) => {
         <TextContainer>
           <TextWrapper>
             <Text
-              label={location}
-              size={"lg"}
-              weight={600}
+              text={location}
+              fontSize={"lg"}
+              fontWeight={600}
               color={colors.Secondary900}
             />
-            <Text label={"자세히보기"} color={colors.Primary600} />
+            <Text text={"자세히보기"} color={colors.Primary600} />
           </TextWrapper>
         </TextContainer>
         <BorderTop />
         <TextContainer>
           <TextWrapper>
             <Text
-              label={mainMenu}
-              size={"lg"}
-              weight={600}
+              text={mainMenu}
+              fontSize={"lg"}
+              fontWeight={600}
               color={colors.Secondary900}
             />
-            <Text label={openingHours} color={colors.Secondary700} />
+            <Text text={openingHours} color={colors.Secondary700} />
           </TextWrapper>
           <TextWrapper>
-            <Text label={detailMenu} color={colors.Secondary700} />
+            <Text text={detailMenu} color={colors.Secondary700} />
           </TextWrapper>
           <TextWrapper>
             <Text
-              label={nutritionalInfo}
-              size={"sm"}
+              text={nutritionalInfo}
+              fontSize={"sm"}
               color={colors.Secondary600}
             />
             <Text
-              label={price}
-              size={"lg"}
-              weight={600}
+              text={price}
+              fontSize={"lg"}
+              fontWeight={600}
               color={colors.Secondary900}
             />
           </TextWrapper>

@@ -2,20 +2,20 @@ import { theme } from "../../GlobalStyle";
 import styled, { css } from "styled-components";
 
 const StyledText = styled.div<textProps>`
-  font-weight: ${({ weight }) => weight};
+  font-weight: ${({ fontWeight }) => fontWeight};
   color: ${({ color }) => color};
-  ${({ size }) => getTextSize(size)};
+  ${({ fontSize }) => getTextSize(fontSize)};
 `;
 
 export type textProps = {
-  label?: string;
-  size?: "sm" | "md" | "lg";
-  weight?: number;
+  text?: string;
+  fontSize?: "sm" | "md" | "lg";
+  fontWeight?: number;
   color?: string;
 };
 
-const getTextSize = (size?: textProps["size"]) => {
-  switch (size) {
+const getTextSize = (fontSize?: textProps["fontSize"]) => {
+  switch (fontSize) {
     case "sm": {
       return css`
         ${theme.Text_sm};
@@ -39,10 +39,20 @@ const getTextSize = (size?: textProps["size"]) => {
   }
 };
 
-export const Text = ({ label, size, weight = 500, color }: textProps) => {
+export const Text = ({
+  text,
+  fontSize,
+  fontWeight = 500,
+  color,
+}: textProps) => {
   return (
-    <StyledText label={label} size={size} weight={weight} color={color}>
-      {label}
+    <StyledText
+      text={text}
+      fontSize={fontSize}
+      fontWeight={fontWeight}
+      color={color}
+    >
+      {text}
     </StyledText>
   );
 };

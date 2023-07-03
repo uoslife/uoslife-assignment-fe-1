@@ -18,9 +18,9 @@ type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {
   args: {
-    label: "Example",
-    size: "md",
-    weight: 500,
+    text: "Example",
+    fontSize: "md",
+    fontWeight: 500,
     color: colors.Secondary900,
   },
 };
