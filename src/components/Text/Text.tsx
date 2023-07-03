@@ -39,7 +39,7 @@ const getTextSize = (size?: textProps["size"]) => {
   }
 };
 
-const Text = ({ label, size, weight = 500, color }: textProps) => {
+export const Text = ({ label, size, weight = 500, color }: textProps) => {
   return (
     <StyledText label={label} size={size} weight={weight} color={color}>
       {label}
