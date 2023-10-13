@@ -8,7 +8,7 @@ const Text = ({
   color,
   lineHeight,
   width,
-}: TextType & { width?: number; lineHeight: number }) => {
+}: TextType & { width?: number; lineHeight?: number }) => {
   return (
     <S.textWrapper width={width} lineHeight={lineHeight}>
       <S.text
@@ -24,7 +24,7 @@ const Text = ({
 };
 
 const S = {
-  textWrapper: styled.div<{ width?: number; lineHeight: number }>`
+  textWrapper: styled.div<{ width?: number; lineHeight?: number }>`
     display: flex;
     justify-content: center;
     align-items: center;
