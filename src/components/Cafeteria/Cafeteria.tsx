@@ -30,9 +30,9 @@ const CafeteriaDetail = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px 16px 16px 16px;
+  padding: 16px;
   border-top: 1px solid #dee1e5;
-  gap: 12px;
+  gap: 10px;
 `;
 
 const Cafeteria: FC<CafeteriaProps> = ({ cafeteria }) => {
@@ -52,7 +52,7 @@ const Cafeteria: FC<CafeteriaProps> = ({ cafeteria }) => {
         <StyledFlexContainer>
           <Text text={cafeteria.detailMenu} fontSize={16} fontWeight={500} color="#808A98" />
         </StyledFlexContainer>
-        <StyledFlexContainer>
+        <StyledFlexContainer style={{marginTop: "-4px"}}>
           <Text text={cafeteria.nutritionalInfo} fontSize={11} fontWeight={500} color="#97A1AE" />
           <Text text={cafeteria.price} fontSize={18} fontWeight={600} color="#3B4046" />
         </StyledFlexContainer>
