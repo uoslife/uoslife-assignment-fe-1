@@ -2,8 +2,8 @@ import { FC } from "react";
 import styled from "styled-components";
 
 interface StyledTextProps {
-  fontSize?: string;
-  fontWeight?: string;
+  fontSize?: number;
+  fontWeight?: number;
   color?: string;
 }
 

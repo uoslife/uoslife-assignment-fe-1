@@ -2,7 +2,6 @@ import GlobalStyle from "./GlobalStyle";
 
 import Cafeteria from "./components/Cafeteria/Cafeteria";
 import { CafeteriaType } from "./components/Cafeteria/Cafeteria.type";
-import Text from "./components/Text/Text";
 
 const DEFAULT_CAFETERIA_INFO: CafeteriaType = {
 	location: "학생회관 1층",
